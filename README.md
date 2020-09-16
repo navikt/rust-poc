@@ -1,6 +1,6 @@
 # rust-poc
 
-Forhåpentligvis en grei proof of concept at Rust kan brukes til utvikling av tjenester i Nav!
+Forhåpentligvis en grei proof of concept som beviser at Rust kan brukes til utvikling av tjenester i Nav!
 
 ## Så langt
 
