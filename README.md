@@ -6,7 +6,7 @@ Forhåpentligvis en grei proof of concept som beviser at Rust kan brukes til utv
 
 - [x] En webapp som svarer på vanlige HTTP-requests
     - Bygger på [Rocket](https://rocket.rs).
-- [ ] Deployment til NAIS
+- [x] Deployment til NAIS
 - [ ] Prometheus
 - [ ] Logging
 - [ ] En kobling til database
