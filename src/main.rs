@@ -2,17 +2,21 @@
 #[macro_use] extern crate rocket;
 
 mod api;
+mod environment;
 mod structs;
 
-use api::Api;
+use api::api;
+use environment::Environment;
 use structs::blueprint::Blueprint;
 
 
 fn main() {
-    let api = Api::new();
+    let api = api();
+    let _env = Environment::new();
 
-    rocket::ignite()
-        .mount(api.root.basepath, api.root.paths)
-        .mount(api.internal.basepath, api.internal.paths)
-        .launch();
+    let mut app = rocket::ignite();
+    for route in api {
+        app = app.mount(route.basepath, route.paths);
+    }
+    app.launch();
 }

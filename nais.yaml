@@ -14,6 +14,11 @@ spec:
     min: 2
     max: 4
     cpuThresholdPercentage: 50
+  gcp:
+    sqlInstances:
+      - type: POSTGRES_12
+        databases:
+          - name: rustpoc
   resources:
     limits:
       cpu: 500m
@@ -23,7 +28,7 @@ spec:
       memory: 256Mi
   liveness:
     path: internal/isAlive
-    intialDelay: 60
+    intialDelay: 15
   readiness:
     path: internal/isReady
-    initialDelay: 60
+    initialDelay: 15
