@@ -1,6 +1,6 @@
 FROM gcr.io/distroless/cc
 
-COPY ./rust-poc .
+COPY ./target/release/rust-poc .
 
 EXPOSE 8000
 ENV RUST_LOG=warn
