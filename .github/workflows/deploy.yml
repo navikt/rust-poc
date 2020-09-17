@@ -52,8 +52,8 @@ jobs:
       - name: Build and publish Docker image
         run: |
           cp target/release/rust-poc .
-          docker build -t ${IMAGE} .
           docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${{ secrets.ACCESS_TOKEN }}
+          docker build -t ${IMAGE} .
           docker push ${IMAGE}
 
   deploy-to-dev-fss:
