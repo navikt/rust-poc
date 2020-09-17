@@ -44,10 +44,7 @@ jobs:
         with:
           toolchain: nightly
       - name: Build binary
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release
+        run: cargo build --release
       - name: Build and publish Docker image
         run: |
           TIME=$(date +'%Y-%m-%d')
