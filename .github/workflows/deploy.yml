@@ -2,7 +2,7 @@ name: Build and deploy to dev-gcp
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 env:
   APP: rust-poc
 jobs:
