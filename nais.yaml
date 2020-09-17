@@ -1,0 +1,29 @@
+apiVersion: "nais.io/v1alpha1"
+kind: "Application"
+metadata:
+  name: rust-poc
+  namespace: flex
+  labels:
+    team: flex
+spec:
+  image: {{ image }}
+  port: 8000
+  ingresses:
+    - "https://rust-poc.dev.nav.no"
+  replicas:
+    min: 2
+    max: 4
+    cpuThresholdPercentage: 50
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+  liveness:
+    path: internal/isAlive
+    intialDelay: 60
+  readiness:
+    path: internal/isReady
+    initialDelay: 60

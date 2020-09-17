@@ -8,7 +8,7 @@ Forhåpentligvis en grei proof of concept som beviser at Rust kan brukes til utv
     - Bygger på [Rocket](https://rocket.rs).
 - [ ] Deployment til NAIS
 - [ ] Prometheus
-- [ ] Logging til Kibana
+- [ ] Logging
 - [ ] En kobling til database
 - [ ] En kafka-lytter som lytter på et eller annet
 - [ ] En kafka-produsent som produserer et eller annet
